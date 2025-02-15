@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Antworten speichern und drucken</title>
+  <!-- Quill CSS -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <!-- Externe CSS-Datei -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Bereich zum Drucken eines einzelnen Textes -->
+  <div id="printContent">
+    <!-- Gespeichert-Indikator: Always visible -->
+    <div id="saveIndicator">Gespeichert</div>
+
+    <h3 id="fragenTitle">Antworten zu: <span id="fragenAssignmentId"></span></h3>
+    <div id="fragenBox" class="quill-editor"></div>
+    <pre id="fragenText" style="display: none;"></pre>
+  </div>
+  
+  <!-- Button-Container mit allen Buttons -->
+  <div class="button-container">
+    <button id="downloadAllBtn">Antworten als PDF drucken</button>
+    <button id="clearBtn" onclick="clearLocalStorage()">Antworten löschen</button>
+  </div>
+  
+  <!-- Haupt-Button-Container für verbleibende Funktionen -->
+  <div class="button-container-main">
+    <!-- Entfernte Buttons: copyAllBtn und clearAllBtn -->
+  </div>
+  
+  <!-- Quill JS -->
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <!-- Externe JavaScript-Datei -->
+  <script src="script.js"></script>
+</body>
+</html>
